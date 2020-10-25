@@ -43,6 +43,9 @@
             this.dtgNorthwind.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgNorthwind.Size = new System.Drawing.Size(1035, 474);
             this.dtgNorthwind.TabIndex = 2;
+            this.dtgNorthwind.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgNorthwind_CellFormatting);
+            this.dtgNorthwind.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dtgNorthwind_RowPostPaint);
+            this.dtgNorthwind.Paint += new System.Windows.Forms.PaintEventHandler(this.dtgNorthwind_Paint);
             // 
             // frmDataGridView
             // 

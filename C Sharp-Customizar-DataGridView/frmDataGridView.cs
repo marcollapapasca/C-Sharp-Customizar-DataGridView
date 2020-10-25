@@ -129,25 +129,7 @@ namespace C_Sharp_Customizar_DataGridView
             }
         }
 
-        private void dtgNorthwind_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            try
-            {
-                if (e.RowIndex == -1 && e.ColumnIndex > -1)
-                {
-                    e.PaintBackground(e.CellBounds, false);
-                    Rectangle r2 = e.CellBounds;
-                    r2.Y += e.CellBounds.Height / 2;
-                    r2.Height = e.CellBounds.Height / 2;
-                    e.PaintContent(r2);
-                    e.Handled = true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "C# - Customizar DataGridView", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+ 
 
 
         private void dtgNorthwind_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
